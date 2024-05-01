@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// nav
+.nav_bar {
+  @apply flex items-center justify-between relative h-[60px] bg-white dark:bg-main-dark border-b border-b-main-dark dark:border-b-slate-200 text-black dark:text-[#fff] font-semibold;
+}
+// ul
+nav {
+  ul {
+    .active {
+      @apply bg-white-muted dark:bg-secondry-dark;
+    }
+  }
+}
+// buttons
+.add_to_cart_btn {
+  @apply text-white capitalize font-semibold bg-primary px-4 py-2 rounded-md cursor-pointer;
+}
+.remove_from_cart_btn {
+  @apply text-white capitalize font-semibold bg-red-600  px-4 py-2 rounded-md cursor-pointer;
+}
+.submit_btn {
+  @apply text-white capitalize font-semibold bg-primary px-4 py-2 rounded-md cursor-pointer w-full;
+}
+// input
+.input {
+  @apply bg-white dark:bg-main-dark border border-secondry-dark dark:border-white-muted p-2 focus:outline-none rounded-md font-semibold dark:caret-white dark:text-white;
+}
+// footer
+.footer {
+  @apply flex items-center justify-between relative h-[200px] bg-white dark:bg-main-dark border-t border-t-secondry-dark dark:border-t-slate-200 text-black dark:text-white-muted font-semibold md:px-36 px-5;
+}

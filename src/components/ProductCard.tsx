@@ -70,43 +70,52 @@ export const ProductCard = ({ product, row, cart }: ProductCardProps) => {
           </p>
           <div className="flex items-center gap-3 font-semibold">
             {!row && (
-              <Link to={`/products/${product.id}`} className="add_to_cart_btn">
-                Show
-              </Link>
+              <motion.div whileTap={{ scale: 1.2 }}>
+                <Link
+                  to={`/products/${product.id}`}
+                  className="add_to_cart_btn"
+                >
+                  Show
+                </Link>
+              </motion.div>
             )}
             {currentProductCart ? (
               <div className="flex items-center">
-                <button
+                <motion.button
                   className="add_to_cart_btn"
                   onClick={() => incrementCount(product.id)}
+                  whileTap={{ scale: 1.2 }}
                 >
                   +
-                </button>
+                </motion.button>
                 <p className="bg-white dark:bg-secondry-dark text-black dark:text-white-muted px-2 text-lg">
                   {currentProductCart?.count}
                 </p>
-                <button
+                <motion.button
                   className="remove_from_cart_btn"
                   onClick={() => decrementCount(product.id)}
+                  whileTap={{ scale: 1.2 }}
                 >
                   -
-                </button>
+                </motion.button>
               </div>
             ) : (
-              <button
+              <motion.button
                 className="add_to_cart_btn"
                 onClick={() => addToCart(product)}
+                whileTap={{ scale: 1.2 }}
               >
                 Add
-              </button>
+              </motion.button>
             )}
             {currentProductCart && row && (
-              <button
+              <motion.button
                 className="remove_from_cart_btn"
                 onClick={() => removeFromCart(product.id)}
+                whileTap={{ scale: 1.2 }}
               >
                 Remove
-              </button>
+              </motion.button>
             )}
           </div>
         </div>

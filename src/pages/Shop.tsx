@@ -103,9 +103,13 @@ export const Shop = () => {
               {maxPrice}
             </label>
           </div>
-          <button className="add_to_cart_btn" onClick={hundleFilter}>
+          <motion.button
+            className="add_to_cart_btn"
+            onClick={hundleFilter}
+            whileTap={{ scale: 1.2 }}
+          >
             Filter
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="flex gap-10 justify-center mt-10 px-12 md:flex-row flex-col">

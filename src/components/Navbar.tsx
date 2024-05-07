@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <motion.nav
-      className="nav_bar md:px-5 sm:px-3 px-1"
+      className="nav_bar px-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

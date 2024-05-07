@@ -10,7 +10,6 @@ import {
 import useDarkModeStore from "./stors/dark-mode-store";
 import useCartStore from "./stors/cart-store";
 import { useEffect } from "react";
-
 export default function App() {
   const { darkMode } = useDarkModeStore();
   const { cartProducts } = useCartStore();
